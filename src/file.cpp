@@ -5,6 +5,8 @@
 
 #include <bx/file.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #ifndef BX_CONFIG_CRT_FILE_READER_WRITER
 #	define BX_CONFIG_CRT_FILE_READER_WRITER !BX_CRT_NONE
 #endif // BX_CONFIG_CRT_FILE_READER_WRITER
@@ -956,3 +958,5 @@ namespace bx
 	}
 
 } // namespace bx
+
+#pragma clang diagnostic pop

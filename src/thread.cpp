@@ -241,6 +241,8 @@ namespace bx
 		return m_exitCode;
 	}
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 	void Thread::setThreadName(const char* _name)
 	{
 		ThreadInternal* ti = (ThreadInternal*)m_internal;
@@ -305,6 +307,7 @@ namespace bx
 		BX_UNUSED(_name);
 #endif // BX_PLATFORM_
 	}
+#pragma clang diagnostic pop
 
 	void Thread::push(void* _ptr)
 	{
